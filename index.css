@@ -1,0 +1,320 @@
+html{font-size:20px;}
+body {margin: 0; padding: 0; }
+.wrapper {
+	width: 12rem;
+	margin: 5rem auto;
+}
+.littleH {
+	position: relative;
+}
+.bodyH {
+	width: 12rem;
+	height: 20rem;
+	border: 5px solid #000;
+	border-radius: 5.75rem;
+	position: absolute;
+	background: rgb(249, 217, 70);
+	overflow: hidden;
+	z-index: 2;
+}
+
+
+.bodyH .trousers {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 5.0rem;
+	border-top: 6px solid #000;
+	background: rgb(32, 116, 160);
+} 
+.trousers_top {
+	width: 8.0rem;
+	height: 3.0rem;
+	border: 6px solid #000;
+	border-bottom: none;
+	background: rgb(32, 116, 160);
+	position: absolute;
+	left:1.7rem;
+	bottom: 5.0rem;
+}
+
+.condoleBelt {
+	position: relative;
+}
+.condoleBelt>div {
+	width: 5.0rem;
+	height: 0.8rem;
+	border: 5px solid #000;
+	background: rgb(32, 116, 160);
+	position: absolute;
+	top: -4.5rem;
+	left: -1.75rem;
+	z-index: 2;
+	transform: rotate(45deg);
+}
+.condoleBelt .right {
+	transform: rotate(-45deg);
+	left: 8.25rem;
+	top:-4.4rem;
+}
+.condoleBelt>div:after {
+	content: "";
+	width: 0.4rem;
+	height: 0.4rem;
+	border-radius: 50%;
+	background: #000;
+	position: absolute;
+	top: 0.2rem;
+	left: 4.4rem;
+}
+.condoleBelt .right:after {
+	left: 0.25rem;
+}
+
+.pocket {
+	width: 3.25rem;
+	height: 2.25rem;
+	border: 6px solid #000;
+	border-radius: 	 0 0 1.25rem 1.25rem;
+	position: absolute;
+	bottom: 3.25rem;
+	left: 4.2rem;
+}
+.line_left {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-bottom-right-radius: 6.0rem;
+	border-bottom: 6px solid #000;
+	border-right: 6px solid #000;
+	position: absolute;
+	left:  1.0rem;
+	bottom: 2.5rem;
+}
+.line_right {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-bottom-left-radius: 6.0rem;
+	border-bottom: 6px solid #000;
+	border-left: 6px solid #000;
+	position: absolute;
+	right:   1.0rem;
+	bottom: 2.5rem;
+}
+.line_bottom {
+	height: 2.0rem;
+	border: 3px solid #000;
+	position:  absolute;
+	bottom: 0.2rem	;
+	left: 5.9rem;	
+}
+
+
+.eyes {
+	position: relative;
+	z-index: 3;
+}
+
+.eyes .leftEye, .eyes .rightEye {
+	width: 4.25rem;
+	height: 4.25rem;
+	border-radius: 50%;
+	border: 6px solid #000;
+	background: #fff;
+	position: absolute;
+	top:3.0rem;
+	left: 1.35rem;
+}
+.eyes .leftEye:after,.eyes .rightEye:after {
+	content: "";
+	width: 1.4rem;
+	height: 0.9rem;
+	background: #000;
+	position: absolute;
+	top: 1.85rem;
+	left: -1.5rem;
+	transform: skewX(20deg) rotate(7deg);
+}
+.eyes .rightEye:after {
+	left: 4.45rem;
+	top:1.85rem;
+	transform: skewX(-20deg) rotate(-7deg);
+}
+.eyes .rightEye {
+	left: 6.2rem;
+}
+@keyframes blackEye {
+	2%,20%,50%,70%,100%{
+		transform: translateX(0);
+	}
+	30%,40% {
+		transform: translate(0.75rem);
+	}
+	80%,90%{
+		transform: translateX(-0.75rem);
+	}
+}
+
+.left_blackEye,.right_blackEye {
+	width: 2.0rem;
+	height: 2.0rem;
+	border-radius: 2.5rem;
+	background: #000;
+	position: absolute;
+	top:1.2rem;
+	left: 1.1rem;
+	animation: blackEye 5s ease-in infinite;
+}
+@keyframes whiteEye {
+	0%,20%,50%,60%,90%,100%{
+		transform: translateX(0);
+	}
+	30%,40%{
+		transform: translate3d(0.15rem, 0.2rem, 0);
+	}
+	70%,80%{
+		transform: translate3d(-0.75rem, 0.2rem, 0);
+	}
+}
+.eyes .left_white,.eyes .right_white {
+	width: 1.0rem;
+	height: 1.0rem;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top: 0.35rem;
+	left: 0.85rem;
+	animation: whiteEye 5s ease-in infinite;
+}
+
+
+.mouse {
+	position: absolute;
+}
+.mouse .mouse_shape {
+	width: 2.6rem;
+	height: 1.75rem;
+	border: 5px solid #000;
+	border-bottom-left-radius: 1.5rem;
+	background: #fff;
+	position: absolute;
+	top: 8.75rem;
+	left: 4.9rem;
+	z-index: 3;
+	transForm:rotate(-35deg);
+}
+.mouse .mouse_shape:after {
+	content: "";
+	width: 3.6rem;
+	height: 1.6rem;
+	border-bottom: 5px solid #000;
+	border-radius: 1.75rem 1.8rem 0.25rem 0.25rem;
+	background: rgb(249, 217, 70);
+	position: absolute;
+	top:-0.7rem;
+	left:0.15rem;
+	transform: rotate(34deg);
+	/*animation: mouse_mask 5s ease-in-out infinite;*/
+}
+
+.hands {
+	position: relative;
+}
+.leftHand, .rightHand {
+	width: 4.0rem;
+	height: 4.0rem;
+	border: 6px solid #000;
+	border-radius: 1.25rem;
+	background: rgb(249, 217, 70);
+	position: absolute;
+	top:11.0rem;
+	left: -1.15rem;
+	transform: rotate(40deg);
+}
+.rightHand {
+	left: 9.0rem;
+	transform: rotate(-40deg);
+}
+.leftHand:after,.rightHand:after {
+	content: "";
+	width:0.3rem;
+	height: 0.3rem;
+	border: 3px solid #000;
+	background: #fff;
+	border-radius: 0.15rem;
+	position: absolute;
+	left: 0.9rem;
+	top: 2.4rem;
+	transform: rotate(100deg);
+}
+.rightHand:after {
+	left: 2.5rem
+}
+
+
+.feet {
+	position: relative;
+}
+@keyframes leftFoot {
+	0%,100% {
+		transform: rotate(0);
+	}
+	80%{
+		transform: rotate(8deg);
+	}
+}
+.left_foot,.right_foot {
+	width: 1.8rem;
+	height: 2.5rem;
+	
+	background: #000;
+	position: absolute;
+	top:20.3rem;
+	left: 4.4rem;
+}
+.left_foot {
+	transform-origin:top right;
+	animation: leftFoot 0.8s ease-in-out infinite;
+	border-bottom-right-radius: 0.3rem;
+	border-bottom-left-radius: 0.45rem;
+}
+@keyframes rightFoot {
+	0%,100% {
+		transform: rotate(0);
+	}
+	80%{
+		transform: rotate(-8deg);
+	}
+}
+.right_foot {
+	border-bottom-right-radius: 0.45rem;
+	border-bottom-left-radius: 0.3rem;
+	left: 6.5rem;
+	transform-origin:top left;
+	animation: rightFoot 0.8s ease-in-out infinite;
+}
+.left_foot:after, .right_foot:after {
+	content: "";
+	width: 3.0rem;
+	height: 1.5rem;
+	border-radius: 1.0rem 0.5rem 1.0rem 0.75rem;
+	position: absolute;
+	background: #000;
+	left: -1.8rem;
+	top: 1.0rem;
+}
+.right_foot:after {
+	border-radius: 0.5rem 1.0rem 0.75rem 1.0rem;
+	left: .65rem;
+}
+
+
+.groundShadow {
+	width: 10.0rem;
+	height: 2px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0,0.3);
+	box-shadow: 0 0 2px 4px rgba(0,0,0,0.3);
+	position: absolute;
+	top: 22.9rem;
+	left: 1.4rem;
+}
